@@ -1,0 +1,129 @@
+@tailwind base;  
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+
+/* Navbar button hover effect */
+.navbar-button:hover {
+  background-color: #cccccc; /* Ubah warna latar hover sesuai keinginan */
+}
+@media (max-width: 960px) {
+  .navbar-button {
+    padding: 10px 24px; /* Sesuaikan padding untuk tombol pada layar sm dan md */
+    min-width: 120px; /* Sesuaikan lebar minimum untuk tombol pada layar sm dan md */
+  }
+}
+
+code {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.drawer-container {
+   /* Ubah warna background drawer sesuai warna navbar */
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.main-content {
+  background-size: cover;
+  background-position: center;
+  min-height: 85vh; /* Tinggi minimum 85vh untuk layar besar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden; /* Tambahkan ini untuk memastikan gambar tidak meluap */
+}
+
+.main-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Agar gambar menyesuaikan proporsi dengan baik */
+}
+
+@media (max-width: 1024px) { /* Layar ukuran medium (md) */
+  .main-content {
+    min-height: 80vh; /* Tinggi minimum 80vh untuk layar medium */
+    padding: 10px;
+  }
+
+  .main-content img {
+    object-fit: contain; /* Agar gambar tidak terpotong */
+  }
+}
+
+@media (max-width: 768px) { /* Layar ukuran kecil (sm) */
+  .main-content {
+    min-height: 40vh; /* Tinggi minimum 40vh untuk layar kecil */
+    padding: 5px;
+  }
+
+  .main-content img {
+    object-fit: contain; /* Agar gambar tidak terpotong */
+  }
+}
+
+/* untuk navbar yang ada di bagian content */
+.news-navbar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem;
+}
+.news-navbar {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-color: #f0f0f0; /* Warna abu-abu */
+  padding: 0px;
+  position: relative;
+}
+.news-button {
+  background-color: #dad9d9;
+  color: rgb(121, 120, 120);
+  font-weight: bold;
+  border: none;
+  padding: 8px 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  cursor: pointer; transition: background-color 0.3s ease; 
+}
+.news-button:hover {
+  background-color: white; font-weight: bold;
+}
